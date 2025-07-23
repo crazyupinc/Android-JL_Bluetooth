@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white_12_shape">
+
+    <TextView
+        android:id="@+id/tv_noise_ctrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/noise_control"
+        android:textColor="@color/black_242424"
+        android:textSize="@dimen/text_15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_voice_adjust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_more_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_noise_ctrl"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_noise_ctrl"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_noise_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_noise_ctrl">
+
+        <View
+            android:id="@+id/view_noise_mode_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_gray_20_shape"
+            android:paddingStart="4dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_noise_mode_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_noise_mode_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="2dp"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/bg_round_blue_shape"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_denoise_white" />
+
+        <ImageView
+            android:id="@+id/iv_noise_mode_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="2dp"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/text_transparent"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_transparent_gray" />
+
+        <ImageView
+            android:id="@+id/iv_noise_mode_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="2dp"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_noise_mode_end"
+            app:layout_constraintStart_toEndOf="@+id/iv_noise_mode_start"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/text_transparent"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_noise_close_gray" />
+
+        <TextView
+            android:id="@+id/tv_noise_mode_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black_242424"
+            android:textSize="@dimen/text_13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_noise_mode_start"
+            app:layout_constraintTop_toBottomOf="@+id/iv_noise_mode_start"
+            tools:text="@string/noise_mode_denoise" />
+
+        <TextView
+            android:id="@+id/tv_noise_mode_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black_242424"
+            android:textSize="@dimen/text_13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_noise_mode_end"
+            app:layout_constraintTop_toBottomOf="@+id/iv_noise_mode_end"
+            tools:text="@string/noise_mode_transparent" />
+
+        <TextView
+            android:id="@+id/tv_noise_mode_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black_242424"
+            android:textSize="@dimen/text_13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_noise_mode_mid"
+            app:layout_constraintStart_toStartOf="@+id/iv_noise_mode_mid"
+            app:layout_constraintTop_toBottomOf="@+id/iv_noise_mode_mid"
+            tools:text="@string/noise_mode_close" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_space"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_noise_mode"/>
+
+    <include
+        android:id="@+id/view_anc_func"
+        layout="@layout/view_anc_func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/view_space" />
+
+    <include
+        android:id="@+id/view_transparent_func"
+        layout="@layout/view_transparent_func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/view_space" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

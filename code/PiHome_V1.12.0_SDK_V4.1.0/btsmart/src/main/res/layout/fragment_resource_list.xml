@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    tools:context=".ui.chargingCase.ResourceListFragment">
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/gray_F4F4F4"
+        android:paddingTop="4dp"
+        android:paddingBottom="23dp"
+        android:text="@string/delete"
+        android:textColor="@color/color_text"
+        android:textSize="@dimen/text_10sp"
+        android:drawablePadding="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:drawableTopCompat="@drawable/ic_delete_black"
+        tools:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_resource_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white_ffffff"
+        android:overScrollMode="never"
+        android:layout_marginTop="8dp"
+        android:paddingStart="22dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_delete"
+        tools:itemCount="8"
+        tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/item_select_image"
+        tools:spanCount="2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
